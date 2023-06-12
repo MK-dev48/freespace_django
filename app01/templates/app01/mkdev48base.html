@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>MK-dev48 @ Django</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <a href="{% url 'homepage'%}">＜----topにもどる</a>
+        <div class="whole">
+            <div class="content">
+                <h1>MK-dev48 @ Django</h1>
+                <hr>
+            </div>
+        
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+    </body>
+    <footer>
+        <hr>
+        <p>&copy;Copyright MK-dev48. All rights reserved.</p>
+    </footer>
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="{% static 'css/CM.css' %}">
+	<title>MK-dev48@Django - 調整さんメーカー</title>
+</head>
+
+<body>
+	<a href="{% url 'homepage'%}">＜----topにもどる</a>
+	<div class="header">
+		<h1>調整さんメーカー</h1>
+		<p>
+			<h4>What is This</h4>
+			<a href="https://chouseisan.com/" target="_blank">調整さん</a>の入力が面倒なひと向けのWebツールです｡
+		</p>  
+	</div>
+	<hr>
+
+	<div class="content">
+
+		<div class="left">
+			<label for="reset"><p>★リセットボタンを押すと記録が消えます｡</p> 
+				<input type="button" class="reset" value="日付リセット" onclick="daysreset()">
+				<input type="button" class="reset" value="時刻リセット" onclick="timesreset()">
+				<input type="button" class="reset" value="出力リセット" onclick="resultreset()">
+			</label><br><br><br>
+
+			<label for="input-date">★日付を入力してください｡
+				<input type="date" name="input-date" id="input-date" required pattern="\d{4}-\d{2}-\d{2}"  onblur="dates()">
+				<p><p id="showdates">(入力された日付がここに表示されます｡)</p></p>
+			</label>
+
+			<label for="input-time">★時刻を入力してください｡
+				<input type="time" id="input-time" step="600" value = "00:00" onblur="times()">
+				<p><p id="showtimes">(入力された時間がここに表示されます｡)</p></p>
+			</label>
+		</div>
+		
+		<div class="right">
+			<label for="result">
+				<p>生成ボタンを押して生成 コピペして使ってね｡ </p>
+				<p> <input type="button" class="generate" value="生成" onclick="print_results()" ></p>
+				<textarea class="textbox" name="textbox" wrap="hard" id="textbox" cols="30" rows="20"></textarea>
+			</label>
+			<p><input type="button" id="copy" value="コピーする" onclick="copy_results()"></p>
+			<p>(コピーに成功するとメッセージが表示されます｡表示されなかったら何回か押してみてね｡)</p>
+		</div>
+	</div>
+		
+		
+	<!-- Debug: <input type="button" value="テスト用" onclick="test()" > -->
+	
+	<script src="{% static 'js/CM.js' %}"></script>
+</body>
+<footer class="footer">
+	<p>&copy;Copyright MK-dev48. All rights reserved.</p>
+</footer>
+</html>
