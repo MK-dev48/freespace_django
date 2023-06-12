@@ -6,12 +6,17 @@ ul{
     padding-left: 0;
 }
 
+footer{
+    text-align: center;
+}
 
 .whole {
     text-align: center;
-    padding: 1em;
+    padding: 4em;
 
-    font-size: x-large;
+    font-size: medium;
+    font-family: sans-serif;
+
 }
 .content {
     padding-bottom: 1em;
