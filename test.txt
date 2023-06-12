@@ -1,4 +1,4 @@
-test
+test desu
 
 仮想空間の起動: source myvenv/bin/activate
 

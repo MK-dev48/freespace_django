@@ -10,6 +10,10 @@ footer{
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .whole {
     text-align: center;
     padding: 4em;
