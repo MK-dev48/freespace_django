@@ -6,5 +6,5 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
-/app02
-test.txt
+app02
+/test.txt
