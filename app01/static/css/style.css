@@ -14,12 +14,20 @@ a {
     text-decoration: none;
 }
 
-.whole {
-    text-align: center;
-    padding: 4em;
-
+html {
     font-size: medium;
     font-family: sans-serif;
+}
+
+body {
+    padding: 1em;
+}
+
+.whole {
+    text-align: center;
+    padding: 3em;
+
+
 
 }
 .content {
