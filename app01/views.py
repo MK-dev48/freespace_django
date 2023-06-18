@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 from .pyapps import sample
+from .pyapps.form import InputForm
+from .pyapps import testcode04
 
 # Create your views here.
 
@@ -52,4 +54,19 @@ def testpage03(request):
 
 #テストページ04
 def testpage04(request):
-    return render(request, "app01/testpage04.html")
+    data = {
+        'title' : ' Hello World.',
+        'message' : 'This is a Message.',
+        'form' : InputForm(),
+        'moji' : '',
+        'suji' : '',
+        'test01' : '',
+    }
+
+    if(request.method == 'POST'):
+        data['form'] = InputForm(request.POST)
+
+    data['moji'] = request.POST.get('text')
+    data['suji'] = request.POST.get('number')
+
+    return render(request, "app01/testpage04.html", data)

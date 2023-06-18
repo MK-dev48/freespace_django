@@ -17,5 +17,13 @@
         <input type="submit">
     </form>
 </div>
+<div class="content">
+    送信結果（文字）: {{ moji }}  送信結果（数字）：{{ suji }}
+</div>
+<div class="content">
+    ・送信された文字をテキストボックスに突っ込む
+    <br>
+    <textarea name="textbox0" id="0" cols="30" rows="5"> {{moji}} </textarea>
+</div>
 
 {% endblock %}
