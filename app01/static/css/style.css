@@ -1,3 +1,8 @@
+@font-face {
+    font-family: MPlusRounded;
+    src: url('../fonts/MPLUSRounded1c-Regular.ttf' format('opentype'));
+}
+
 li {
     list-style: none;
 }
@@ -16,19 +21,17 @@ a {
 
 html {
     font-size: medium;
-    font-family: sans-serif;
+    font-family: MplusRounded;
 }
 
-body {
-    padding: 1em;
+
+.gotop {
+    padding-left: 20px;
 }
 
 .whole {
     text-align: center;
     padding: 3em;
-
-
-
 }
 .content {
     padding-bottom: 1em;

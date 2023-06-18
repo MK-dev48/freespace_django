@@ -1,0 +1,35 @@
+<!-- このページをテスト https://qol-kk.com/wp2/blog/2021/03/05/post-2710/#outline__1_4 -->
+
+{% extends 'app01/mkdev48base.html' %}
+
+{% block pagename %}  testpage03  {% endblock %}
+
+{%load tag_library%}
+
+{% block title %}  testpage03  {% endblock %}
+{% block content %}
+<div class="content">
+    <h4>What is this</h4>
+    テストページ03　引数付き関数を動かすテスト
+</div>
+
+<div class="content">
+    テスト1 <br>
+    {%for index, sk in Skills.items %}
+        {{index}} 
+        <br>
+        {{sk|change_Range}}
+    {%endfor%}
+</div>
+<div class="content">
+    テスト2
+    <br>
+    {{2|test03test}}
+</div>
+<div class="content">
+    <p>テスト1はうごかなくていいけど、テスト2は動かなアカン　テスト2はなにかの数の次乗が出るで</p>
+    <p>フォームのテストは04です。</p>
+</div>
+
+
+{% endblock %}
