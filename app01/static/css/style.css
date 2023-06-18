@@ -1,6 +1,6 @@
 @font-face {
-    font-family: MPlusRounded;
-    src: url('../fonts/MPLUSRounded1c-Regular.ttf' format('opentype'));
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    src: url('../fonts/MPLUSRounded1c-Regular.ttf');
 }
 
 li {
@@ -21,7 +21,7 @@ a {
 
 html {
     font-size: medium;
-    font-family: MplusRounded;
+    font-family: sans-serif;
 }
 
 
